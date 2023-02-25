@@ -2,6 +2,7 @@
 
 :root {
     --Darkcyan: hsl(158, 36%, 37%);
+    --btnHover: hsl(158, 36%, 25%);
     --Cream: hsl(30, 38%, 92%);
     --Verydarkblue: hsl(212, 21%, 14%);
     --Darkgrayishblue: hsl(228, 12%, 48%);
@@ -103,10 +104,18 @@ img {
     border-radius: 0.5rem;
     color: var(--White);
     font-weight: bold;
-
     display: flex;
     justify-content: center;
     gap: 0.8rem;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.card__body-btn:hover {
+    background-color: var(--btnHover);
+}
+
+.card__body-btn:active {
+    transform: scale(1.1);
 }
 
 @media (min-width: 700px) {
