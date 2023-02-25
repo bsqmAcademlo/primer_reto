@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.img__desktop {
+    display: none;
+}
+
+.ff-Fraunces {
+    font-family: "Fraunces", serif;
+}
+
+.ff-Montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    padding: 1rem;
+    background-color: var(--Cream);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    max-width: 500px;
+    display: grid;
+}
+
+.card__img {
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card__body {
+    background-color: var(--White);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.card__body h4 {
+    color: var(--Darkgrayishblue);
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+
+.card__body h2 {
+    font-size: 2rem;
+    color: var(--Verydarkblue);
+}
+
+.card__body p {
+    color: var(--Darkgrayishblue);
+    line-height: 1.5rem;
+}
+
+.card__body-price {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.card__body-price p:nth-child(1) {
+    font-size: 2.2rem;
+    color: var(--Darkcyan);
+}
+
+.card__body-price p:nth-child(2) {
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+}
+
+.card__body-btn {
+    background-color: var(--Darkcyan);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: var(--White);
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+@media (min-width: 700px) {
+    /* .container {
+        background-color: red;
+    } */
+
+    .img__mobile {
+        display: none;
+    }
+
+    .img__desktop {
+        display: block;
+    }
+
+    .card {
+        max-width: 700px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card__img {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .card__body {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
